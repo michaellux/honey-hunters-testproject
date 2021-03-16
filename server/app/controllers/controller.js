@@ -3,7 +3,7 @@ const Comment = db.comments;
 const Op = db.Sequelize.Op;
 
 exports.create = (req, res) => {
-  if (!req.body.name || !req.body.email || !req.body.email) {
+  if (!req.body.name || !req.body.email || !req.body.comment) {
     res.status(400).send({
       message: "Content can not be empty!"
     });
@@ -13,7 +13,7 @@ exports.create = (req, res) => {
   const comment = {
     name: req.body.name,
     email: req.body.email,
-    text: req.body.text,
+    comment: req.body.comment,
   };
 
   Comment.create(comment)
