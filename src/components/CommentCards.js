@@ -39,6 +39,7 @@ export default class CommentCards extends Component {
     const { comments } = this.state;
     return (
       <div className="commentcards">
+        <div className="commentcards__wrapper">
         <h2 className="commentcards__title">Выводим комментарии</h2>
         <ul className="commentcards__cards cards">
           {comments &&
@@ -60,6 +61,7 @@ export default class CommentCards extends Component {
               </li>))
           }
         </ul>
+        </div>
       </div>
     );
   }

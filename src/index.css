@@ -1,0 +1,251 @@
+html body {
+  margin: 0;
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f6f6f7;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+.root {
+  width: 100%;
+}
+
+.app.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.header {
+  background-color: #2d3136;
+  min-height: 7.717996289424861vh;
+}
+
+.header__wrapper {
+  padding-top: 2.152133580705009%;
+  padding-bottom: 3.246268656716418%;
+  margin-left: 15vw;
+}
+
+.logo {
+  width: 18.33333333333333%;
+  height: auto;
+}
+
+.companyName {
+  visibility: hidden;
+  height: 0;
+  margin: 0;
+}
+
+.addcomment-block {
+  background-color: #2d3136;
+  min-height: 37.42115027829314vh;
+}
+
+.addcomment-block__wrapper {
+  margin-left: 14.28571428571429vw;
+  margin-right: 14.64285714285714vw;
+}
+
+.companion-image {
+  width: 16.66666666666667vw;
+  height: auto;
+  display: block;
+  margin: auto auto 0.9rem auto;
+}
+
+.addcomment-form {
+  display: flow-root;
+}
+
+.addcomment-form__wrapper.row,
+.addcomment-form__wrapper > .col-12 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.addcomment-form__wrapper > .col-md:first-child {
+  padding-right: 4.345238095238095vw;
+}
+
+.addcomment-form__wrapper > .col-md:last-child {
+  padding-left: 4.345238095238095vw;
+}
+
+.addcomment-form__wrapper > .col-12 {
+  padding: 0;
+}
+
+.addcomment-form__input-block,
+.addcomment-form__textarea-block {
+  display: grid;
+}
+
+.name-block {
+  margin-bottom: 1.63rem;
+}
+
+.label {
+  color: #d7d7d7;
+  font-weight: 500;
+  margin-bottom: 0.55rem;
+  
+}
+
+.input,
+.textarea {
+  background-color: #2f3136;
+  border: 3px solid #4c4f53;
+  border-radius: 9px;
+  color: #d7d7d7;
+  font-weight: normal;
+  padding: 0.75rem 0.63rem;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: #743538;
+  outline: none;
+}
+
+.textarea {
+  resize: none;
+  height: 12.35621521335807vh;
+}
+
+.btn.addcomment-form__writeButton {
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #be393b;
+  font-size: 0.72rem;
+  padding: 0.66rem 0.75rem;
+  float: right;
+}
+
+.commentcards {
+  background-color: #f6f6f7;
+  min-height: 49.49907235621521vh;
+}
+
+.commentcards__wrapper {
+  margin-left: 16.2797619047619vw;
+  margin-right: 16.3690476190476vw;
+}
+
+.commentcards__title {
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: #37414e;
+  text-align: center;
+  margin-top: 5.417439703153989vh;
+  margin-bottom: 5.120593692022263vh;
+}
+
+.commentcards__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+}
+
+.cards__item {
+  width: 19.61309523809524vw;
+  height: 24.19642857142857vw;
+  margin-bottom: 3.988095238095238vh;
+}
+
+.cards__item::after {
+  content: "";
+  width: 19.61309523809524vw;
+  height: 24.19642857142857vw;
+}
+
+.cards__item > * {
+  display: block;
+  text-align: center;
+}
+
+.item__name {
+  color: #fff;
+  padding-top: 1.447124304267161vh;
+  padding-bottom: 0.9833024118738404vh;
+}
+
+.item__email {
+  padding-top: 2.152133580705009vh;
+  padding-bottom: 2.61595547309833vh;
+}
+
+.item__comment {
+  margin: auto 2.261904761904762vh; 
+}
+
+.cards__item:nth-child(odd) {
+  background-color: #e9eef3;
+}
+
+.cards__item:nth-child(even) {
+  background-color: #deebde;
+}
+
+.cards__item:nth-child(odd) .item__name {
+  background-color: #4b596c;
+}
+
+.cards__item:nth-child(odd) .item__email {
+  color: #6d737b;
+  font-weight: bold;
+}
+
+.cards__item:nth-child(odd) .item__comment {
+  color: #767582;
+  font-weight: 500;
+}
+
+.cards__item:nth-child(even) .item__name {
+  background-color: #58ad52;
+}
+
+.cards__item:nth-child(even) .item__email {
+  color: #58ad52;
+  font-weight: bold;
+}
+
+.cards__item:nth-child(even) .item__comment {
+  color: #768275;
+  font-weight: normal;
+}
+
+.footer {
+  background-color: #2a2d33;
+  min-height: 5.36178107606679vh;
+}
+
+.footer__logo {
+  width: 14.64285714285714%;
+}
+
+.logo-block {
+  float: right;
+}
+
+.logo-vk {
+  margin-right: 2.946428571428571vw;
+}
+
+.logo-vk,
+.logo-fb {
+  width: 2.946428571428571vw;
+  height: auto;
+}
+
+.footer__wrapper {
+  margin-left: 14.9702380952381vw;
+  margin-right: 15.86309523809524vw;
+  padding-top: 1.391465677179963%;
+  padding-bottom: 2.115027829313544%;
+}
