@@ -1,42 +1,25 @@
-import React, { Component } from "react";
+import {React, useEffect} from "react";
+import { useSelector, useDispatch } from "react-redux";
 import CommentDataService from "../services/service";
+import { loadComments, selectComments } from '../reducer';
+export function CommentCards() {
+  const { comments } = useSelector(selectComments);
+  const dispatch = useDispatch();
 
-export default class CommentCards extends Component {
-  constructor(props) {
-    super(props);
-    this.retrieveComments = this.retrieveComments.bind(this);
-    this.refreshCards = this.refreshCards.bind(this);
+  useEffect(() => {
+    retrieveComments();
+  }, []);
 
-    this.state = {
-      comments: [],
-    };
-  }
-
-  componentDidMount() {
-    this.retrieveComments();
-  }
-
-  retrieveComments() {
+  function retrieveComments() {
     CommentDataService.getAll()
       .then(response => {
-        this.setState({
-          comments: response.data
-        });
+        dispatch(loadComments(response.data));
       })
       .catch(e => {
         console.log(e);
       });
   }
 
-  refreshCards() {
-    this.retrieveComments();
-    this.setState({
-      currentComment: null
-    });
-  }
-
-  render() {
-    const { comments } = this.state;
     return (
       <div className="commentcards">
         <div className="commentcards__wrapper">
@@ -64,5 +47,4 @@ export default class CommentCards extends Component {
         </div>
       </div>
     );
-  }
 }
