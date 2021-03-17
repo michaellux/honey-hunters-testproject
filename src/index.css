@@ -1,5 +1,5 @@
 html body {
-  margin: 0;
+  margin: 0 auto;
   display: flex;
   flex: 1 0 auto;
   justify-content: center;
@@ -7,6 +7,10 @@ html body {
   background-color: #f6f6f7;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
+}
+
+img {
+  max-width: 100%;
 }
 
 .root {
@@ -79,8 +83,7 @@ html body {
   padding: 0;
 }
 
-.addcomment-form__input-block,
-.addcomment-form__textarea-block {
+.addcomment-form__input-block {
   display: grid;
 }
 
@@ -92,14 +95,19 @@ html body {
   color: #d7d7d7;
   font-weight: 500;
   margin-bottom: 0.55rem;
-  
+}
+
+.label::after {
+  content: "*";
+  margin-left: 0.4rem;
+  color: #be393b;
 }
 
 .input,
 .textarea {
   background-color: #2f3136;
-  border: 3px solid #4c4f53;
-  border-radius: 9px;
+  border: 2px solid #4c4f53;
+  border-radius: 5px;
   color: #d7d7d7;
   font-weight: normal;
   padding: 0.75rem 0.63rem;
@@ -113,16 +121,30 @@ html body {
 
 .textarea {
   resize: none;
-  height: 12.35621521335807vh;
+  height: 100%;
+}
+
+.addcomment-form__textarea-block {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .btn.addcomment-form__writeButton {
+  width: 13.69047619047619vw;
   font-weight: bold;
   color: #ffffff;
   background-color: #be393b;
-  font-size: 0.72rem;
+  font-size: 1rem;
   padding: 0.66rem 0.75rem;
   float: right;
+  margin: 4.007421150278293% auto 3.636363636363636% auto;
+  border-radius: 2px;
+}
+
+.btn.addcomment-form__writeButton:hover {
+  color: #fff;
+  background-color: #af3b3d;
 }
 
 .commentcards {
@@ -131,12 +153,12 @@ html body {
 }
 
 .commentcards__wrapper {
-  margin-left: 16.2797619047619vw;
-  margin-right: 16.3690476190476vw;
+  padding-left: 16.2797619047619vw;
+  padding-right: 16.3690476190476vw;
 }
 
 .commentcards__title {
-  font-size: 0.86rem;
+  font-size: 2.5vw;
   font-weight: 500;
   color: #37414e;
   text-align: center;
@@ -153,12 +175,16 @@ html body {
 }
 
 .cards__item {
-  width: 19.61309523809524vw;
-  height: 24.19642857142857vw;
+  width: 29.14639540026537%;
+  min-height: 24.19642857142857vw;
+  min-width: 10rem;
   margin-bottom: 3.988095238095238vh;
+  border-radius: 2px;
+  word-break: break-word;
+  overflow: hidden;
 }
 
-.cards__item::after {
+.commentcards__cards::after {
   content: "";
   width: 19.61309523809524vw;
   height: 24.19642857142857vw;
@@ -167,12 +193,18 @@ html body {
 .cards__item > * {
   display: block;
   text-align: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .item__name {
   color: #fff;
   padding-top: 1.447124304267161vh;
   padding-bottom: 0.9833024118738404vh;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 2px;
+  font-weight: 500;
 }
 
 .item__email {
@@ -181,7 +213,8 @@ html body {
 }
 
 .item__comment {
-  margin: auto 2.261904761904762vh; 
+  margin: auto 2.261904761904762vw;
+  margin-bottom: 2.61595547309833vh; 
 }
 
 .cards__item:nth-child(odd) {
@@ -226,7 +259,7 @@ html body {
 }
 
 .footer__logo {
-  width: 14.64285714285714%;
+  width: 14.82142857142857%;
 }
 
 .logo-block {
@@ -248,4 +281,66 @@ html body {
   margin-right: 15.86309523809524vw;
   padding-top: 1.391465677179963%;
   padding-bottom: 2.115027829313544%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .header__wrapper {
+    margin: auto;
+    text-align: center;
+  }
+
+  .logo {
+    width: 7.5rem;
+  }
+
+  .addcomment-form__wrapper .col-md:first-child,
+  .addcomment-form__wrapper .col-md:last-child {
+    padding: 0;
+  }
+
+  .email-block,
+  .addcomment-form__textarea-block {
+    margin-bottom: 1.63rem;
+  }
+
+  .btn.addcomment-form__writeButton {
+    width: 100%;
+  }
+
+  .commentcards__wrapper {
+    padding: 0;
+    margin: auto;
+  }
+
+  .commentcards__title {
+    margin: 1rem;
+    font-size: 1rem;
+  }
+
+  .commentcards__cards {
+    justify-content: space-around;
+  }
+
+  .commentcards__cards::after {
+    display: none;
+  }
+
+  .footer__wrapper {
+    flex-direction: column;
+  }
+
+  .footer__wrapper > * {
+    margin: 1rem auto;
+  }
+
+  .logo-block {
+    display: flex;
+  }
+
+  .logo-block > * {
+    width: 2rem;
+  }
 }

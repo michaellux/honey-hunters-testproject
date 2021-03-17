@@ -48,8 +48,8 @@ export function AddComment(props) {
                     name="name"
                   />
                 </div>
-                <div className="addcomment-form__input-block">
-                  <label className="addcomment-form__labelemail label" htmlFor="email">E-mail</label>
+                <div className="addcomment-form__input-block email-block">
+                  <label className="addcomment-form__labelemail label" htmlFor="email">E-Mail</label>
                   <input
                     aria-label="Email"
                     type="email"
@@ -64,7 +64,7 @@ export function AddComment(props) {
               </div>
               <div className="col-12 col-md">
                 <div className="addcomment-form__textarea-block">
-                  <label className="addcomment-form__labelcomment label" for="comment">Комментарий</label>
+                  <label className="addcomment-form__labelcomment label" htmlFor="comment">Комментарий</label>
                   <textarea className="addcomment-form__comment textarea" required value={comment}
                     onChange={(e) => setComment(e.target.value)}
                     id="comment"
